@@ -1,0 +1,19 @@
+#context-menu {
+    width:205px;
+    height:100px;
+    background-color:#f4f4f4;
+    display: none;
+}
+#context-menu ul {
+    padding:8px 25px;
+}
+#context-menu ul li {
+    list-style:none;
+    padding-bottom:3px;
+}
+li a {
+    text-decoration: none;
+    font-size:14px;
+    font-family:Arial;
+    color:black;
+}
