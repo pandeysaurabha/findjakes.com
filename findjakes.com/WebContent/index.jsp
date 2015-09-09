@@ -1,0 +1,272 @@
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>FindJakes.com - Find Your Nearest Public Toilets | Delhi
+	| Noida | Gurgaon | Indore | India</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Description"
+	content="Find Your Nearest Public Toilets in India" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords"
+	content="findjakes, public toilet, public toilets in delhi, public toilets in new delhi, public toilets in pune, public toilets in banglore, public toilets in india, clean india, sulabh toilets" />
+
+<link rel="icon" href="favicon.png" type="image/png" />
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/grayscale.css" rel="stylesheet">
+<link href="css/utility.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<style>
+#autocomplete {
+	margin-top: 10px;
+	position: absolute;
+	z-index: 99;
+}
+</style>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+<script src="js/map.js"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"
+	onload="initMap()">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-main-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand page-scroll" href="#page-top"> <i
+					class="fa fa-play-circle"></i> <span class="light">FindJakes.com</span>
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div
+				class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				<ul class="nav navbar-nav">
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					<li class="hidden"><a href="#page-top"></a></li>
+					<li><a class="page-scroll" href="#our-story">Our Story</a></li>
+					<li><a class="page-scroll" href="#suggest-toilet">Suggest</a>
+					</li>
+					<li><a class="page-scroll" href="#contact">Contact</a></li>
+					<li><a class="page-scroll" href="#download">Download</a></li>
+					<li><a class="page-scroll" href="#developers">Developers</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<!-- Intro Header -->
+	<header class="map_header">
+		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+			<input class="form-control input-medium" id="autocomplete"
+				placeholder="Enter city" type="text" />
+		</div>
+		<div id="map_canvas"></div>
+		</div>
+	</header>
+
+	<!-- Our Story Section -->
+	<section id="our-story" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>Our Story</h2>
+				<p class="text-justify">Behind every innovation, there lies a
+					story. Before I disclose what the innovation is, I will share you
+					the story which inspired us.</p>
+
+				<p class="text-justify">
+					One day I (Saurabha Pandey) was walking down a street in New Delhi
+					for some work, far away from my Residence/Office. While I was busy
+					looking for some stuff in the market I felt an urgent need to
+					urinate. I never pee in public, not only I feel ashamed but also I
+					think that is too un-hygienic. I wanted to go back home but that it
+					was too far and the pain in my lower abdomen wouldn't have resisted
+					it for so long, which insisted me to seek an alternative. My mind
+					was going blank, as I could hardly control myself. So, I went
+					inside the next shop and asked the shopkeeper, if they can allow me
+					to use their toilet as I was in some desperation. To my surprise he
+					said, we don't have a personalized toilet here at shop, but advised
+					me to use the public toilet. I thought, that wasn't a bad idea
+					either and I asked him to help me find the toilet. <a
+						href="our-story.jsp" target="_blank"><u>Read More</u></a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Suggest Section -->
+	<section id="suggest-toilet"
+		class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>Suggest Toilet</h2>
+				<p class="text-justify">
+					Please WhatsApp on <b>+91-8800192160</b> or fill the below form
+					(click on the “Suggest Toilet” button) for any info which you can
+					share to help us achieve our goal, collectively.
+				</p>
+				<ul class="list-inline banner-social-buttons">
+					<li><a href="http://goo.gl/forms/zZwmHmPidG" target="_blank"
+						class="btn btn-default btn-lg"><span class="network-name">Suggest
+								Toilet</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<!-- Contact Section -->
+	<section id="contact" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>Contact FindJakes.com</h2>
+				<p>
+					For any feedback or information please write us at: <a
+						href="mailto:feedback@findjakes.com">feedback@findjakes.com</a>
+				</p>
+				<ul class="list-inline banner-social-buttons">
+					<li><a href="https://twitter.com/FindJakes" target="_blank"
+						class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i>
+							<span class="network-name">Twitter</span></a></li>
+					<li><a href="https://goo.gl/vJRXLG" target="_blank"
+						class="btn btn-default btn-lg"><i
+							class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Download Section -->
+	<section id="download" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>Download</h2>
+				<p class="text-justify">Find Jakes is avalible only for Android
+					users. Please download Android App from Google Play store.</p>
+				<ul class="list-inline banner-social-buttons">
+					<li><a href="https://goo.gl/slrdiZ" target="_blank"
+						class="btn btn-default btn-lg"><span class="network-name">Google
+								Play store</span></a></li>
+				</ul>
+				<br /> <br /> <br /> <br />
+			</div>
+		</div>
+	</section>
+
+	<!-- Developers Section -->
+	<section id="developers" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>Developers</h2>
+				<p class="text-justify">Get public toilets addresses into your
+					website or app to build the best Toilet Finder apps.</p>
+				<ul class="list-inline banner-social-buttons">
+					<li><a
+						href="https://gist.github.com/pandeysaurabha/756f34e5a68383df6d26"
+						target="_blank" class="btn btn-default btn-lg"><i
+							class="fa fa-github fa-fw"></i> <span class="network-name">GitHub
+								Gist</span></a> <a href="https://github.com/pandeysaurabha/findjakes.com"
+						target="_blank" class="btn btn-default btn-lg"><i
+							class="fa fa-github fa-fw"></i> <span class="network-name">GitHub</span></a>
+					</li>
+				</ul>
+				<br /> <br /> <br /> <br />
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+	<footer>
+		<div class="container text-center">
+			<p>Copyright &copy; 2015 FindJakes.com</p>
+		</div>
+	</footer>
+	<div id="context-menu">
+		<ul>
+			<li><a href="#1" title="Link 1">Back</a></li>
+		</ul>
+	</div>
+
+	<hidden name="rating" value="rating"></hidden>
+	<hidden name="locationId"></hidden>
+	<input type="hidden" id="city" name="city" value="New Delhi" />
+	<input type="hidden" id="cityLat" name="cityLat" value="28.6233814" />
+	<input type="hidden" id="cityLng" name="cityLng" value="77.2144139" />
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="js/jquery.easing.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="js/grayscale.js"></script>
+	<script>
+        $(window).resize(function(){
+            initMap();
+        });
+	$(window).bind('keydown', function (event) {
+	    if (event.ctrlKey || event.metaKey) {
+		event.preventDefault();
+		var character = String.fromCharCode(event.which).toLowerCase();
+		if('ctrl-' + character == 'ctrl+u') {
+			return false;
+	    	}
+		}
+	});
+	
+	$(document).ready(function () {
+	    $("body").click(function (e) {
+		if (e.target.id != 'context-menu') {
+		    $('#context-menu').hide();
+		}
+	    });
+	    $("body").on('click', '.rating',function (e) {
+		//create ajax request
+	    });
+
+	});
+    </script>
+
+</body>
+
+</html>
